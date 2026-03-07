@@ -4,7 +4,7 @@ function AllTrips() {
   const [trips, setTrips] = useState({});
 
   useEffect(() => {
-    fetch("http://5000-firebase-milestone-1772822263380.cluster-sumfw3zmzzhzkx4mpvz3ogth4y.cloudworkstations.dev/api/trips")
+    fetch(`${process.env.firebase}/api/trips`)
       .then((res) => res.json())
       .then((data) => setTrips(data));
   }, []);

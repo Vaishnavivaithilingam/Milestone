@@ -7,7 +7,7 @@ function Signup() {
   const navigate = useNavigate();
 
   const handleSignup = async () => {
-    const res = await fetch("http://localhost:5000/api/register", {
+    const res = await fetch(`${process.env.firebase}/api/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })

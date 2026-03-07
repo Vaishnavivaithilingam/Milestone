@@ -4,7 +4,7 @@ function Destinations() {
   const [destinations, setDestinations] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/destinations")
+    fetch(`${process.env.firebase}/api/destinations`)
       .then((res) => res.json())
       .then((data) => setDestinations(data));
   }, []);
